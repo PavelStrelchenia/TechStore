@@ -1,26 +1,80 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background-primary: #fafafa;
+    --background-secondary: #f1f1f5;
+
+    --text-primary: #080808;
+    --text-secondary: #4e4e50;
+    --text-footer: #cccccc;
+    --text-placeholder: #747476;
+
+    --border-primary: #e6e6e8;
+
+    --radius-token-sm: 4px;
+    --radius-token-md: 7px;
+    --radius-token-lg: 9px;
+
+    --size-xs: 12px;
+    --size-sm: 14px;
+    --size-base: 16px;
+    --size-lg: 18px;
+    --size-xl: 20px;
+    --size-2xl: 24px;
+    --size-3xl: 32px;
+    --size-4xl: 48px;
+
+    --line-height-tight: 1.1;
+    --line-height-snug: 1.3;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.7;
+
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+
+    --container-max-width: 1280px;
+    --container-padding: 24px;
+    --section-spacing: 80px;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+    --color-background-primary: var(--background-primary);
+    --color-background-secondary: var(--background-secondary);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    --color-text-primary: var(--text-primary);
+    --color-text-secondary: var(--text-secondary);
+    --color-text-footer: var(--text-footer);
+    --color-text-placeholder: var(--text-placeholder);
+
+    --color-border-primary: var(--border-primary);
+
+    --radius-sm: var(--radius-token-sm);
+    --radius-md: var(--radius-token-md);
+    --radius-lg: var(--radius-token-lg);
+
+    --text-xs: var(--size-xs);
+    --text-sm: var(--size-sm);
+    --text-base: var(--size-base);
+    --text-lg: var(--size-lg);
+    --text-xl: var(--size-xl);
+    --text-2xl: var(--size-2xl);
+    --text-3xl: var(--size-3xl);
+    --text-4xl: var(--size-4xl);
+
+    --leading-tight: var(--line-height-tight);
+    --leading-snug: var(--line-height-snug);
+    --leading-normal: var(--line-height-normal);
+    --leading-relaxed: var(--line-height-relaxed);
+
+    --font-weight-regular: var(--weight-regular);
+    --font-weight-medium: var(--weight-medium);
+    --font-weight-semibold: var(--weight-semibold);
+    --font-weight-bold: var(--weight-bold);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background-primary);
+    color: var(--text-primary);
 }
