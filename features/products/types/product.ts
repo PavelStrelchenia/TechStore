@@ -6,4 +6,5 @@ export type Product = {
     rating: number;
     newStatus: boolean;
     like: boolean;
+    count: number;
 };

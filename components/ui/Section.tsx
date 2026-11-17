@@ -3,11 +3,7 @@ type SectionProps = React.PropsWithChildren<{
 }>;
 
 const Section = ({ children, className = "" }: SectionProps) => {
-    return (
-        <section className={`py-[var(--section-spacing)] ${className}`}>
-            {children}
-        </section>
-    );
+    return <section className={`${className}`}>{children}</section>;
 };
 
 export default Section;

@@ -7,25 +7,32 @@ import { arrivedProducts } from "@/features/products/data/arrivedProducts";
 
 const ArrivedSection = () => {
     return (
-        <Section>
+        <Section className="my-7">
             <Container>
-                <div>
-                    <h2>Just arrived</h2>
-                    <p>Be the first to get the latest tech.</p>
-                    <Link href="/shop">
-                        View all products <ArrowRight aria-hidden={true} />
+                <div className="mb-7 flex flex-col md:flex-row md:items-center md:justify-between">
+                    <div>
+                        <h2 className="text-[23px] font-bold">Just arrived</h2>
+                        <p className="text-[14px] text-text-secondary">
+                            Be the first to get the latest tech.
+                        </p>
+                    </div>
+
+                    <Link
+                        href="/shop"
+                        className="mt-5 flex items-center gap-2 text-[14px] text-text-secondary md:mt-0"
+                    >
+                        View all products
+                        <ArrowRight size={16} aria-hidden="true" />
                     </Link>
                 </div>
 
-                <div>
-                    <ul>
-                        {arrivedProducts.map(({ id, ...product }) => (
-                            <li key={id}>
-                                <ProductCard {...product} />
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+                <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+                    {arrivedProducts.map(({ id, ...product }) => (
+                        <li key={id}>
+                            <ProductCard {...product} />
+                        </li>
+                    ))}
+                </ul>
             </Container>
         </Section>
     );

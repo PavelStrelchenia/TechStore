@@ -9,6 +9,7 @@ export const featuredProducts: Product[] = [
         rating: 4.8,
         newStatus: true,
         like: false,
+        count: 54,
     },
     {
         id: "2",
@@ -18,6 +19,7 @@ export const featuredProducts: Product[] = [
         rating: 4.5,
         newStatus: false,
         like: false,
+        count: 106,
     },
     {
         id: "3",
@@ -27,6 +29,7 @@ export const featuredProducts: Product[] = [
         rating: 5,
         newStatus: false,
         like: false,
+        count: 28,
     },
     {
         id: "4",
@@ -36,5 +39,6 @@ export const featuredProducts: Product[] = [
         rating: 4.9,
         newStatus: true,
         like: false,
+        count: 32,
     },
 ];

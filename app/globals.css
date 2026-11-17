@@ -77,4 +77,40 @@
 body {
     background-color: var(--background-primary);
     color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: Inter, sans-serif;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+@layer components {
+    .nav-link {
+        @apply relative text-[14px] font-semibold text-text-primary transition-colors duration-150;
+    }
+
+    .nav-link::after {
+        @apply absolute -bottom-1 left-0 h-[2px] w-full origin-left scale-x-0 bg-[#2860FF] transition-transform duration-150 content-[''];
+    }
+
+    .nav-link:hover {
+        @apply text-[#2860FF];
+    }
+
+    .nav-link:hover::after {
+        @apply scale-x-100;
+    }
+
+    .action-link {
+        @apply w-9 h-9 flex items-center justify-center transition-colors duration-150 text-text-primary;
+    }
+
+    .action-link:hover {
+        @apply hover:text-[#2860FF];
+    }
 }
