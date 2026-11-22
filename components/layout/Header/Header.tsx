@@ -4,7 +4,7 @@ import { UserRound, Heart, ShoppingBag, Search, Menu } from "lucide-react";
 
 const Header = () => {
     return (
-        <header className="w-full bg-background-primary h-[50px]">
+        <header className="sticky top-0 z-50 h-[50px] w-full border-b border-black/5 bg-background-primary/80 backdrop-blur-xl">
             <Container className="flex w-full h-full justify-between items-center gap-2 md:gap-8  ">
                 <div>
                     <Link

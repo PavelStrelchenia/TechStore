@@ -12,7 +12,7 @@ const ProductCard = ({
     title,
     rating,
     price,
-    count,
+    reviewCount,
 }: ProductCardProps) => {
     return (
         <article className="relative mx-auto w-full max-w-[230px] rounded-xl border border-[#EAEAEA] bg-white p-4 transition-shadow duration-200 hover:shadow-md">
@@ -58,7 +58,7 @@ const ProductCard = ({
                         aria-hidden="true"
                     />
                     <span className="font-medium text-[#171717]">{rating}</span>
-                    <span>({count})</span>
+                    <span>({reviewCount})</span>
                 </div>
 
                 <div className="mt-3 text-base font-bold text-[#171717]">

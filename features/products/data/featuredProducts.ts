@@ -1,44 +1,7 @@
-import type { Product } from "../types/product";
+import { products } from "./products";
 
-export const featuredProducts: Product[] = [
-    {
-        id: "1",
-        title: "Sony WH-1000XM5 Headphones",
-        imageSrc: "/images/products/160x100.svg",
-        price: 78,
-        rating: 4.8,
-        newStatus: true,
-        like: false,
-        count: 54,
-    },
-    {
-        id: "2",
-        title: "HP Fortis G1i Chromebook",
-        imageSrc: "/images/products/160x100.svg",
-        price: 812.9,
-        rating: 4.5,
-        newStatus: false,
-        like: false,
-        count: 106,
-    },
-    {
-        id: "3",
-        title: "Logitech G305 X Superlight",
-        imageSrc: "/images/products/160x100.svg",
-        price: 89.59,
-        rating: 5,
-        newStatus: false,
-        like: false,
-        count: 28,
-    },
-    {
-        id: "4",
-        title: "ASUS TUF Gaming",
-        imageSrc: "/images/products/160x100.svg",
-        price: 200,
-        rating: 4.9,
-        newStatus: true,
-        like: false,
-        count: 32,
-    },
-];
+const featuredProductIds = ["1", "2", "3", "4", "5"];
+
+export const featuredProducts = products.filter((product) =>
+    featuredProductIds.includes(product.id),
+);

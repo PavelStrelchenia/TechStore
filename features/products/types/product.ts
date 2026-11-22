@@ -4,7 +4,7 @@ export type Product = {
     imageSrc: string;
     price: number;
     rating: number;
+    reviewCount: number;
     newStatus: boolean;
     like: boolean;
-    count: number;
 };
