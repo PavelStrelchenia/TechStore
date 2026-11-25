@@ -39,6 +39,7 @@ const ratings = [
 
 const ProductFilters = () => {
     const [sortOption, setSortOption] = useState<ProductSortOption>("featured");
+    const [showMobileFilters, setShowMobileFilters] = useState(false);
 
     const [filters, setFilters] = useState<ProductFiltersState>({
         category: "all",
@@ -142,10 +143,23 @@ const ProductFilters = () => {
     const sortedProducts = sortProducts(filteredProducts, sortOption);
 
     return (
-        <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[250px_minmax(0,1fr)] lg:gap-10">
+        <div className="space-y-5">
+            <button
+                type="button"
+                onClick={() => setShowMobileFilters((isOpen) => !isOpen)}
+                aria-expanded={showMobileFilters}
+                aria-controls="shop-filter-panel"
+                className="flex w-full items-center justify-center gap-2 rounded-xl border border-border-primary bg-white px-4 py-3 text-sm font-semibold text-text-primary shadow-sm transition-colors hover:border-[#2860FF] xl:hidden"
+            >
+                <SlidersHorizontal size={17} />
+                {showMobileFilters ? "Hide filters" : "Show filters"}
+            </button>
+
+            <div className="grid grid-cols-1 items-start gap-6 xl:grid-cols-[240px_minmax(0,1fr)] xl:gap-8">
             <aside
+                id="shop-filter-panel"
                 aria-label="Product filters"
-                className="h-fit w-full rounded-2xl border border-border-primary bg-white p-5 shadow-sm md:p-6"
+                className={`${showMobileFilters ? "block" : "hidden"} h-fit w-full rounded-2xl border border-border-primary bg-white p-5 shadow-sm md:p-6 xl:sticky xl:top-24 xl:block` }
             >
                 <div className="mb-5 flex items-center justify-between">
                     <div className="flex items-center gap-2">
@@ -436,7 +450,7 @@ const ProductFilters = () => {
             </aside>
 
             <div className="min-w-0">
-                <div className="mb-5 flex flex-wrap items-center justify-between gap-4">
+                <div className="mb-5 flex flex-col items-stretch justify-between gap-3 sm:flex-row sm:items-center">
                     <p className="text-sm text-text-secondary">
                         Showing{" "}
                         <span className="font-semibold text-text-primary">
@@ -445,14 +459,14 @@ const ProductFilters = () => {
                         of {products.length} products
                     </p>
 
-                    <label className="flex items-center gap-2 text-sm text-text-secondary">
+                    <label className="flex min-w-0 items-center justify-between gap-2 text-sm text-text-secondary sm:justify-start">
                         <span>Sort by:</span>
 
                         <select
                             name="sort"
                             value={sortOption}
                             onChange={handleSortChange}
-                            className="rounded-lg border border-border-primary bg-white px-3 py-2 text-sm text-text-primary outline-none transition-colors focus:border-[#3858F6]"
+                            className="min-w-0 max-w-full rounded-lg border border-border-primary bg-white px-3 py-2 text-sm text-text-primary outline-none transition-colors focus:border-[#3858F6]"
                         >
                             <option value="featured">Featured</option>
                             <option value="price-low-high">Price: Low to High</option>
@@ -464,6 +478,7 @@ const ProductFilters = () => {
                 </div>
 
                 <ProductGrid products={sortedProducts} />
+            </div>
             </div>
         </div>
     );

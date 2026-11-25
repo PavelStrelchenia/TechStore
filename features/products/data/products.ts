@@ -3,8 +3,8 @@ import type { Product } from "../types/product";
 export const products: Product[] = [
     {
         id: "1",
-        title: "Sony WH-1000XM5 Headphones",
-        imageSrc: "/images/products/160x100.svg",
+        title: "Sony WH-CH730N Headphones",
+        imageSrc: "/images/products/1_headphones_sony-WH-CH730N.jpg",
         price: 78,
         rating: 4.7,
         newStatus: true,
@@ -16,7 +16,7 @@ export const products: Product[] = [
     {
         id: "2",
         title: "HP Fortis G1i Chromebook",
-        imageSrc: "/images/products/160x100.svg",
+        imageSrc: "/images/products/2_HP_Fortis.webp",
         price: 812.9,
         rating: 4.5,
         newStatus: false,
@@ -28,7 +28,7 @@ export const products: Product[] = [
     {
         id: "3",
         title: "Logitech G305 X Superlight",
-        imageSrc: "/images/products/160x100.svg",
+        imageSrc: "/images/products/3_Logitech_G305.webp",
         price: 89.59,
         rating: 5,
         newStatus: false,
@@ -40,19 +40,19 @@ export const products: Product[] = [
     {
         id: "4",
         title: "ASUS TUF Gaming",
-        imageSrc: "/images/products/160x100.svg",
+        imageSrc: "/images/products/4_ASUS_TUF_Gaming.jpg",
         price: 200,
         rating: 4.9,
         newStatus: true,
         like: false,
         reviewCount: 32,
-        category: "computers",
+        category: "gaming",
         inStock: true,
     },
     {
         id: "5",
         title: "Google Pixel 11 Pro XL",
-        imageSrc: "/images/products/160x100.svg",
+        imageSrc: "/images/products/5_Google_Pixel_11_Pro_XL.jpg",
         price: 1120,
         rating: 4.3,
         newStatus: true,
@@ -64,7 +64,7 @@ export const products: Product[] = [
     {
         id: "6",
         title: "iPhone Duo",
-        imageSrc: "/images/products/160x100.svg",
+        imageSrc: "/images/products/6_iphone_duo.jpg",
         price: 2210,
         rating: 4.2,
         newStatus: true,
@@ -76,7 +76,7 @@ export const products: Product[] = [
     {
         id: "7",
         title: "Apple Watch Series 12",
-        imageSrc: "/images/products/160x100.svg",
+        imageSrc: "/images/products/115x90.svg",
         price: 89.59,
         rating: 5,
         newStatus: true,
@@ -87,14 +87,14 @@ export const products: Product[] = [
     },
     {
         id: "8",
-        title: "ASUS",
-        imageSrc: "/images/products/160x100.svg",
+        title: "ASUS Gaming Laptop",
+        imageSrc: "/images/products/4_ASUS_TUF_Gaming.jpg",
         price: 200,
         rating: 4.9,
         newStatus: true,
         like: false,
         reviewCount: 9,
-        category: "computers",
+        category: "gaming",
         inStock: true,
     },
 ];
