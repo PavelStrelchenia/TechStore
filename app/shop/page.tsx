@@ -4,9 +4,7 @@ import NewsletterSection from "@/components/layout/NewsletterSection/NewsletterS
 import Footer from "@/components/layout/Footer";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
-import ShopSidebar from "@/components/layout/ShopSidebar/ShopSidebar";
-import ProductGrid from "@/features/products/components/ProductGrid";
-import { products } from "@/features/products/data/products";
+import ProductFilters from "@/features/products/components/ProductFilters";
 
 export default function ShopPage() {
     return (
@@ -18,9 +16,7 @@ export default function ShopPage() {
 
                 <Section id="products" className="pb-16 pt-4 md:pb-20">
                     <Container>
-                        <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[250px_minmax(0,1fr)] lg:gap-10">
-                            <ShopSidebar />
-
+                        <div className="min-w-0">
                             <div className="min-w-0">
                                 <div className="mb-7">
                                     <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-[#2860FF]">
@@ -35,7 +31,7 @@ export default function ShopPage() {
                                     </p>
                                 </div>
 
-                                <ProductGrid products={products} />
+                                <ProductFilters />
                             </div>
                         </div>
                     </Container>

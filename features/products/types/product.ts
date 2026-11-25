@@ -1,3 +1,5 @@
+export type ProductCategory = "computers" | "audio" | "accessories" | "gaming";
+
 export type Product = {
     id: string;
     title: string;
@@ -7,4 +9,6 @@ export type Product = {
     reviewCount: number;
     newStatus: boolean;
     like: boolean;
+    category: ProductCategory;
+    inStock: boolean;
 };

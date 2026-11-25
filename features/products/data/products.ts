@@ -10,6 +10,8 @@ export const products: Product[] = [
         newStatus: true,
         like: false,
         reviewCount: 54,
+        category: "audio",
+        inStock: true,
     },
     {
         id: "2",
@@ -20,6 +22,8 @@ export const products: Product[] = [
         newStatus: false,
         like: false,
         reviewCount: 106,
+        category: "computers",
+        inStock: true,
     },
     {
         id: "3",
@@ -30,6 +34,8 @@ export const products: Product[] = [
         newStatus: false,
         like: false,
         reviewCount: 28,
+        category: "accessories",
+        inStock: false,
     },
     {
         id: "4",
@@ -40,6 +46,8 @@ export const products: Product[] = [
         newStatus: true,
         like: false,
         reviewCount: 32,
+        category: "computers",
+        inStock: true,
     },
     {
         id: "5",
@@ -50,6 +58,8 @@ export const products: Product[] = [
         newStatus: true,
         like: false,
         reviewCount: 3,
+        category: "accessories",
+        inStock: true,
     },
     {
         id: "6",
@@ -60,6 +70,8 @@ export const products: Product[] = [
         newStatus: true,
         like: false,
         reviewCount: 5,
+        category: "accessories",
+        inStock: true,
     },
     {
         id: "7",
@@ -70,6 +82,8 @@ export const products: Product[] = [
         newStatus: true,
         like: false,
         reviewCount: 2,
+        category: "accessories",
+        inStock: false,
     },
     {
         id: "8",
@@ -80,5 +94,7 @@ export const products: Product[] = [
         newStatus: true,
         like: false,
         reviewCount: 9,
+        category: "computers",
+        inStock: true,
     },
 ];

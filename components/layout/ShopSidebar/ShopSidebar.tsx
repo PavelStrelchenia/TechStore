@@ -31,7 +31,10 @@ const ShopSidebar = () => {
         >
             <div className="mb-5 flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                    <SlidersHorizontal size={18} className="text-text-primary" />
+                    <SlidersHorizontal
+                        size={18}
+                        className="text-text-primary"
+                    />
                     <h2 className="text-base font-semibold text-text-primary">
                         Filters
                     </h2>
@@ -86,7 +89,9 @@ const ShopSidebar = () => {
                             Min price
                         </span>
                         <span className="flex items-center rounded-lg border border-border-primary px-3 transition-colors focus-within:border-[#2860FF]">
-                            <span className="text-sm text-text-placeholder">$</span>
+                            <span className="text-sm text-text-placeholder">
+                                $
+                            </span>
                             <input
                                 type="number"
                                 name="minPrice"
@@ -102,7 +107,9 @@ const ShopSidebar = () => {
                             Max price
                         </span>
                         <span className="flex items-center rounded-lg border border-border-primary px-3 transition-colors focus-within:border-[#2860FF]">
-                            <span className="text-sm text-text-placeholder">$</span>
+                            <span className="text-sm text-text-placeholder">
+                                $
+                            </span>
                             <input
                                 type="number"
                                 name="maxPrice"
@@ -177,7 +184,11 @@ const ShopSidebar = () => {
                                 className="peer sr-only"
                             />
                             <span className="flex size-4 shrink-0 items-center justify-center rounded-[4px] border border-[#C9C9CE] text-white transition-colors peer-checked:border-[#2860FF] peer-checked:bg-[#2860FF] peer-checked:[&>svg]:opacity-100 peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-[#2860FF]">
-                                <Check size={12} strokeWidth={3} className="opacity-0 transition-opacity" />
+                                <Check
+                                    size={12}
+                                    strokeWidth={3}
+                                    className="opacity-0 transition-opacity"
+                                />
                             </span>
                             <span className="transition-colors group-hover:text-text-primary">
                                 {label}
